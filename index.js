@@ -6,7 +6,7 @@ const mongoose=require("mongoose");
 const lodash=require("lodash");
 
 async function main(){
-    mongoose.connect("mongodb+srv://Arghya7:databaseuser@cluster0.abtyk.mongodb.net/itemsDb",{useNewUrlParser:true});
+    mongoose.connect("mongodb+srv://"+process.env.URL+".mongodb.net/itemsDb",{useNewUrlParser:true});
 }
 
 main().catch(err=>console.log(err));
